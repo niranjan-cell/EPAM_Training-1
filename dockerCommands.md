@@ -1,3 +1,4 @@
+```
 docker image pull <image_name> : To pull image
 docker image ls : To list the images in the local
 docker container ls : To list all the running container
@@ -26,3 +27,4 @@ docker image rm -f <image_name/image_id> : To remove the image from local forcef
 docker image prune -a : To remove all dangling image from local
 
 docker image history <image_name/image_id>: To check the history of the image
+```
