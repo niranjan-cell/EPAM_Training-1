@@ -65,4 +65,7 @@ docker network disconnect <network_name> <container_id/container_name> : To disc
 docker network rm <network_name> : To remove the network if no container joined that specific network
 docker network prune : To remove all unused network
 
+# Wordpress app with mysql database deployment
+docker container run -e MYSQL_ROOT_PASSWORD=somewordpress -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress -v mydbvol:/var/lib/mysql -itd mysql
+docker container run -e WORDPRESS_DB_HOST=172.17.0.2:3306 -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=wordpress -e WORDPRESS_DB_NAME=wordpress -p 80:80  -itd wordpress
 ```
